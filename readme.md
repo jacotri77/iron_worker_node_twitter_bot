@@ -33,7 +33,7 @@ You will need to create a Docker repository here:
 
 https://cloud.docker.com/
 
-<b>***note you can also create a repo through the terminal***</b>
+<h2>***Note: you can also create a repo through the terminal***</h2>
 
 <h3>1. Package your Worker</h3><br>
 
@@ -75,7 +75,7 @@ Push it to Docker Hub:
 
 <h3>3. Register your image with Iron</h3>
 
-Ok, we’re ready to run this on Iron now, but first we have to let Iron know about the image you just pushed to Docker Hub.<br>
+Ok, we’re ready to run this on Iron now, but first we have to let Iron know about the image you just pushed to Docker Hub.<br><br>
 `iron register USERNAME/IMAGENAME:TAG`
 
 `Configuring client`<br />
@@ -84,6 +84,9 @@ Ok, we’re ready to run this on Iron now, but first we have to let Iron know ab
         `Registered code package with id='59baf777a74b24000a7240fa'`<br />
         `Check <br />`https://hud-e.iron.io/worker/projects/59b8769be92bfa000c182d8d/code/59baf77a74b24000a7240fa for more info`<br />
 
+<h3>3. Upload the worker code package to IronWorker</h3>
+
+This uplaods the code package you are going to use in your worker to IronWorker.<br><br>
 `iron worker upload -name bot USERNAME/IMAGENAME:TAG`
 
 `Configuring client`<br />
@@ -94,11 +97,15 @@ Ok, we’re ready to run this on Iron now, but first we have to let Iron know ab
 
 <h3>5. Queue / Schedule jobs for your image</h3>
 
-Now you can start queuing jobs or schedule recurring jobs for your image.<br>
-`iron worker queue bot`
+Now you can start queuing jobs or schedule recurring jobs for your image.<br><br>
+`iron worker queue bot` for a direct queue or you can schedule your task `iron worker queue bot --start-at "12:30" --run-times 5 --run-every 70`
 
 `Configuring client`<br />
         `Project 'Twitter bot' with id='59b8769be92bfa000c182d8d'`<br />
 `----->  Uploading worker 'bot'`<br />
         `Uploaded code package with id='59bafb21c5abcd000bafcd21'`<br />
         `Check` <br />`https://hud-e.iron.io/worker/projects/59b8769be92bfa000c182d8d/code/59bafb21c5abcd000bafcd21 for more info`
+
+<h3>6. Check on your running or finished tasks/h3>
+
+Look at <a href="https://hud-e.iron.io">HUD-e</a> to view your scheduled tasks, running or completed tasks, check logs, etc.<br><br>
