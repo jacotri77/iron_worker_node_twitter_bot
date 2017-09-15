@@ -29,11 +29,15 @@ This github assumes you have some familiarity with Docker and have a Docker Hub 
 
 https://hub.docker.com/
 
-You will need to create a repository that you can build your images onto in the terminal. You can do so here:
+You will need to create a Docker repository here:
 
 https://cloud.docker.com/
 
+<b>***note you can also create a repo through the terminal***<b>
 
+<h3>1. Package your Worker</h3><br>
+
+Let’s package it up inside a Docker image and upload it to a Docker Registry. Copy the Dockerfile from appropriate directory (depending on used programming language) of this repository and modify the ENTRYPOINT line to run your script. Build your docker image:
 `docker build -t USERNAME/IMAGENAME:TAG .`
 
 You should see the following output in your terminal
@@ -54,6 +58,10 @@ You should see the following output in your terminal
 `Successfully built de954b4b140b`<br />
 `Successfully tagged erikjac/twitter:0.0.3`<br />
 
+<h3>2. Push it to Docker Hub</h3>
+
+Push it to Docker Hub:
+
 `docker push USERNAME/IMAGENAME:TAG`
 
 `The push refers to a repository [docker.io/erikjac/twitter]`<br />
@@ -65,6 +73,9 @@ You should see the following output in your terminal
 `5b5d58ee6404: Layer already exists`<br />
 `0.0.3: digest: sha256:df41d5c718823eea7e06c2a49c676e5c6ef01cfadcc9e3f6cb2f17bf1`<br />
 
+<h3>3. Register your image with Iron</h3>
+
+Ok, we’re ready to run this on Iron now, but first we have to let Iron know about the image you just pushed to Docker Hub.<br>
 `iron register USERNAME/IMAGENAME:TAG`
 
 `Configuring client`<br />
@@ -81,6 +92,9 @@ You should see the following output in your terminal
         `Uploaded code package with id='59bafb21c5abcd000bafcd21'`<br />
         `Check `<br />`https://hud-e.iron.io/worker/projects/59b8769be92bfa000c182d8d/code/59bafb21c5abcd000bafcd21 for more info`
 
+<h3>5. Queue / Schedule jobs for your image</h3>
+
+Now you can start queuing jobs or schedule recurring jobs for your image.<br>
 `iron worker queue bot`
 
 `Configuring client`<br />
