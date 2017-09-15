@@ -83,8 +83,8 @@ d532ebb4a10d: Layer already exists<br />
 
 `iron worker queue bot`
 
-`Configuring client<br />
-        Project 'Twitter bot' with id='59b8769be92bfa000c182d8d'<br />
------>  Uploading worker 'bot'<br />
-        Uploaded code package with id='59bafb21c5abcd000bafcd21'<br />
-        Check <br />https://hud-e.iron.io/worker/projects/59b8769be92bfa000c182d8d/code/59bafb21c5abcd000bafcd21 for more info`
+`Configuring client`<br />
+        `Project 'Twitter bot' with id='59b8769be92bfa000c182d8d'<br />`
+`----->  Uploading worker 'bot'<br />`
+        `Uploaded code package with id='59bafb21c5abcd000bafcd21'<br />`
+        `Check <br />`https://hud-e.iron.io/worker/projects/59b8769be92bfa000c182d8d/code/59bafb21c5abcd000bafcd21 for more info`
