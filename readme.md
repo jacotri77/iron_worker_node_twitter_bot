@@ -33,7 +33,7 @@ You will need to create a Docker repository here:
 
 https://cloud.docker.com/
 
-<b>***note you can also create a repo through the terminal***<b>
+<b>***note you can also create a repo through the terminal***</b>
 
 <h3>1. Package your Worker</h3><br>
 
@@ -50,10 +50,10 @@ You should see the following output in your terminal
  `---> ad54579d14b1`<br />
 `Step 3/4 : ADD . /app`<br />
  `---> 23ca3c7f7d4e`<br />
-`Removing intermediate container 88bd966abbb8<`br />
+`Removing intermediate container 88bd966abbb8`<br />
 `Step 4/4 : ENTRYPOINT node bot.js`<br />
- `---> Running in cfce360ecfdd<`br />
- `---> de954b4b140b<`br />
+ `---> Running in cfce360ecfdd`<br />
+ `---> de954b4b140b`<br />
 `Removing intermediate container cfce360ecfdd`<br />
 `Successfully built de954b4b140b`<br />
 `Successfully tagged erikjac/twitter:0.0.3`<br />
