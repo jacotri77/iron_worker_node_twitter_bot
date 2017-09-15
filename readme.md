@@ -4,7 +4,7 @@ Credit to @amanhimself / https://github.com/amandeepmittal for a lot of the base
 
 
 
-```docker build -t erikjac/twitter:0.0.3 .
+`docker build -t erikjac/twitter:0.0.3 .`
 
 Sending build context to Docker daemon  9.867MB
 Step 1/4 : FROM iron/node
