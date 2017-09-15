@@ -46,9 +46,7 @@ https://cloud.docker.com/
 
 <h4>***Note: you can also create a repo through the terminal***</h4>
 <h3>Create directory to host your code and credentials</h3>
-<h3>Getting your credentials added</h3>
-
-    <UL>
+<h3>Getting your credentials added</h3><ul>
         <li>Create a file called `config.js`</li>
         <li>Copy your Twitter credentials in as show below:
                 `module.exports = {`<br>
@@ -56,7 +54,7 @@ https://cloud.docker.com/
                     `consumer_secret: '',`<br>
                     `access_token: '',` <br> 
                     `access_token_secret: ''`<br>
-                    `}`</li>
+                    `}`</li></ul>
 <h3>1. Package your Worker</h3><br>
 
 Let’s package it up inside a Docker image and upload it to a Docker Registry. Copy the Dockerfile from appropriate directory (depending on used programming language) of this <a href="https://github.com/iron-io/dockerworker">repository</a> and modify the ENTRYPOINT line to run your script. Build your docker image:<br><br>
