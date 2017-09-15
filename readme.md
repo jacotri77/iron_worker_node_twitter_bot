@@ -56,7 +56,7 @@ You should see the following output in your terminal
  `---> de954b4b140b`<br />
 `Removing intermediate container cfce360ecfdd`<br />
 `Successfully built de954b4b140b`<br />
-`Successfully tagged erikjac/twitter:0.0.3`<br />
+`Successfully tagged USERNAME/IMAGENAME:TAG`<br />
 
 <h3>2. Push it to Docker Hub</h3>
 
@@ -64,7 +64,7 @@ Push it to Docker Hub:
 
 `docker push USERNAME/IMAGENAME:TAG`
 
-`The push refers to a repository [docker.io/erikjac/twitter]`<br />
+`The push refers to a repository [docker.io/USERNAME/IMAGENAME]`<br />
 `a13329eaedc1: Layer already exists`<br />
 `2f159679b3bf: Layer already exists`<br />
 `0c9a3c45e098: Layer already exists`<br />
@@ -80,9 +80,9 @@ Ok, we’re ready to run this on Iron now, but first we have to let Iron know ab
 
 `Configuring client`<br />
         `Project 'Twitter bot' with id='59b8769be92bfa000c182d8d'`<br />
-`----->  Registering worker 'erikjac/twitter'`<br />
+`----->  Registering worker 'USERNAME/IMAGENAME'`<br />
         `Registered code package with id='59baf777a74b24000a7240fa'`<br />
-        `Check <br />`https://hud-e.iron.io/worker/projects/59b8769be92bfa000c182d8d/code/59baf77a74b24000a7240fa for more info`<br />
+        `Check `<br />https://hud-e.iron.io/worker/projects/59b8769be92bfa000c182d8d/code/59baf77a74b24000a7240fa for more info`<br />
 
 <h3>3. Upload the worker code package to IronWorker</h3>
 
@@ -98,7 +98,7 @@ This uplaods the code package you are going to use in your worker to IronWorker.
 <h3>5. Queue / Schedule jobs for your image</h3>
 
 Now you can start queuing jobs or schedule recurring jobs for your image.<br><br>
-`iron worker queue bot` for a direct queue or you can schedule your task `iron worker queue bot --start-at "12:30" --run-times 5 --run-every 70`
+`iron worker queue bot` for a direct queue<br> You can schedule your task `iron worker queue bot --start-at "12:30" --run-times 5 --run-every 70`
 
 `Configuring client`<br />
         `Project 'Twitter bot' with id='59b8769be92bfa000c182d8d'`<br />
@@ -106,6 +106,6 @@ Now you can start queuing jobs or schedule recurring jobs for your image.<br><br
         `Uploaded code package with id='59bafb21c5abcd000bafcd21'`<br />
         `Check` <br />`https://hud-e.iron.io/worker/projects/59b8769be92bfa000c182d8d/code/59bafb21c5abcd000bafcd21 for more info`
 
-<h3>6. Check on your running or finished tasks/h3>
+<h3>6. Check on your running or finished tasks</h3>
 
 Look at <a href="https://hud-e.iron.io">HUD-e</a> to view your scheduled tasks, running or completed tasks, check logs, etc.<br><br>
