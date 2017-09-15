@@ -6,9 +6,9 @@ Credit to @amanhimself or  https://github.com/amandeepmittal for a lot of the ba
 
 Before starting, you will need to setup a couple of things. You only need to do this once.
 
-Install <a href="http://dev.iron.io/worker/cli/">Iron’s CLI tool</a>
-Setup your <a href="http://dev.iron.io/worker/reference/configuration/">Iron.io credentials</a>
-Install <a href="https://www.docker.com/get-docker">Docker</a>
+Install <a href="http://dev.iron.io/worker/cli/">Iron’s CLI tool</a><br />
+Setup your <a href="http://dev.iron.io/worker/reference/configuration/">Iron.io credentials</a><br />
+Install <a href="https://www.docker.com/get-docker">Docker</a><br />
 Install <a href="https://nodejs.org/en/download/package-manager/">node</a>.  For this bot I used node 8.3. You can check if it is installed with either of these commands:
 
 `node -v or
@@ -48,7 +48,7 @@ https://cloud.docker.com/
 <h3>1. Package your Worker</h3><br>
 
 Let’s package it up inside a Docker image and upload it to a Docker Registry. Copy the Dockerfile from appropriate directory (depending on used programming language) of this <a href="https://github.com/iron-io/dockerworker">repository</a> and modify the ENTRYPOINT line to run your script. Build your docker image:
-`docker build -t USERNAME/IMAGENAME:TAG .`
+`docker build -t USERNAME/IMAGENAME:TAG .` - replace USERNAME/IMAGENAME with your own Docker info or you can also build off of the lightwieght images iron has for each language (iron/node, iron/go, etc.).  Those can be accessed <a href="https://github.com/iron-io/dockerworker">here</a>
 
 You should see the following output in your terminal
 
