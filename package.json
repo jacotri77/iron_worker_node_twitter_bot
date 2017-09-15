@@ -1,0 +1,24 @@
+{
+  "name": "twitter_bot_1",
+  "version": "1.0.0",
+  "description": "low key twitter bot",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "twitter",
+    "api",
+    "node"
+  ],
+  "author": "Erik Jacobsen",
+  "license": "ISC",
+  "dependencies": {
+    "iron": "^4.0.5",
+    "iron_mq": "^0.9.2",
+    "iron_worker": "^0.1.6",
+    "twit": "^2.2.9",
+    "worker": "^0.2.1"
+  }
+}
