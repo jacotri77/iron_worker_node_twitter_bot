@@ -47,8 +47,8 @@ https://cloud.docker.com/
 
 <h3>1. Package your Worker</h3><br>
 
-Let’s package it up inside a Docker image and upload it to a Docker Registry. Copy the Dockerfile from appropriate directory (depending on used programming language) of this <a href="https://github.com/iron-io/dockerworker">repository</a> and modify the ENTRYPOINT line to run your script. Build your docker image:
-`docker build -t USERNAME/IMAGENAME:TAG .` <br>
+Let’s package it up inside a Docker image and upload it to a Docker Registry. Copy the Dockerfile from appropriate directory (depending on used programming language) of this <a href="https://github.com/iron-io/dockerworker">repository</a> and modify the ENTRYPOINT line to run your script. Build your docker image:<br><br>
+`docker build -t USERNAME/IMAGENAME:TAG .` <br><br>
 Replace USERNAME/IMAGENAME with your own Docker info or you can also build off of the lightwieght images iron has for each language (iron/node, iron/go, etc.).  Those can be accessed <a href="https://github.com/iron-io/dockerworker">here</a>
 
 You should see the following output in your terminal
@@ -93,7 +93,7 @@ Ok, we’re ready to run this on Iron now, but first we have to let Iron know ab
         `Project 'Twitter bot' with id='59b8769be92bfa000c182d8d'`<br />
 `----->  Registering worker 'USERNAME/IMAGENAME'`<br />
         `Registered code package with id='59baf777a74b24000a7240fa'`<br />
-        `Check `<br />https://hud-e.iron.io/worker/projects/59b8769be92bfa000c182d8d/code/59baf77a74b24000a7240fa for more info`<br />
+        `Check `<br />`https://hud-e.iron.io/worker/projects/59b8769be92bfa000c182d8d/code/59baf77a74b24000a7240fa for more info`<br />
 
 <h3>3. Upload the worker code package to IronWorker</h3>
 
@@ -119,4 +119,4 @@ Now you can start queuing jobs or schedule recurring jobs for your image.<br><br
 
 <h3>6. Check on your running or finished tasks</h3>
 
-Look at <a href="https://hud-e.iron.io">HUD-e</a> to view your scheduled tasks, running or completed tasks, check logs, etc.<br><br>
+Look at <a href="https://hud-e.iron.io">HUD</a> to view your scheduled tasks, running or completed tasks, check logs, etc.<br><br>
