@@ -21,7 +21,7 @@ Make sure you have the following dependencies installed:
     "twit": "^2.2.9"
   }`
 
-These can be installed using the following:
+These can be installed using the following:<br />
 `npm install iron_mq iron_worker twit`
 
 `docker build -t erikjac/twitter:0.0.3 .`
