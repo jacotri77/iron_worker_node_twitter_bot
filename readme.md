@@ -48,14 +48,14 @@ https://cloud.docker.com/
 
 <h3>Getting your Twitter credentials added</h3><ul>
         <li>Create a directory to add your code into</li>
-        <li>Create a file called `config.js`</li>
+        <li>Create a file called ``config.js`</li>
         <li>Copy your Twitter credentials in as show below:<br><br>
-                `module.exports = {`<br>
-                    `consumer_key: '',`<br>  
-                    `consumer_secret: '',`<br>
-                    `access_token: '', `<br> 
-                    `access_token_secret: ''`<br>
-                    `}`</li></ul><br>
+                module.exports = {<br>
+                    consumer_key: '',<br>  
+                    consumer_secret: '',<br>
+                    access_token: '', <br> 
+                    access_token_secret: ''<br>
+                    }</li></ul><br>
 
 <h3>Let's get the code uploaded and running in IronWorker!</h3><b2>
 <h4>1. Package your Worker</h4><br>
