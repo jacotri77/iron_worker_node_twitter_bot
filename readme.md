@@ -48,7 +48,7 @@ https://cloud.docker.com/
 
 <h3>Getting your Twitter credentials added</h3><ul>
         <li>Create a directory to add your code into</li>
-        <li>Create a file called ``config.js`</li>
+        <li>Create a file called config.js</li>
         <li>Copy your Twitter credentials in as show below:<br><br>
                 module.exports = {<br>
                     consumer_key: '',<br>  
@@ -60,11 +60,11 @@ https://cloud.docker.com/
 <h3>Let's get the code uploaded and running in IronWorker!</h3><b2>
 <h4>1. Package your Worker</h4><br>
 
-Let’s package it up inside a Docker image and upload it to a Docker Registry. Copy the Dockerfile from appropriate directory (depending on used programming language) of this <a href="https://github.com/iron-io/dockerworker">repository</a> and modify the ENTRYPOINT line to run your script. Build your docker image:<br><br>
+Let’s package it up inside a Docker image and upload it to a Docker Registry. Copy the Dockerfile from appropriate directory (depending on used programming language) of this <a href="https://github.com/iron-io/dockerworker">repository</a> and modify the ENTRYPOINT (in this case we are using bot.js) line to run your script. Build your docker image:<br><br>
 `docker build -t USERNAME/IMAGENAME:TAG .` <br><br>
 Replace USERNAME/IMAGENAME with your own Docker info or you can also build off of the lightwieght images iron has for each language (iron/node, iron/go, etc.).  Those can be accessed <a href="https://github.com/iron-io/dockerworker">here</a>
 
-You should see the following output in your terminal
+You should see the following output(with a few semantic differences based on your naming scheme and image size) in your terminal
 
 `Sending build context to Docker daemon  9.867MB `<br />
 `Step 1/4 : FROM iron/node`<br />
