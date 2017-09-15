@@ -6,6 +6,7 @@ Credit to @amanhimself or  https://github.com/amandeepmittal for a lot of the ba
 
 Before starting, you will need to setup a couple of things. You only need to do this once.
 
+Get your app keys through <a href="https://apps.twitter.com/">Twitter</a><br> 
 Install <a href="http://dev.iron.io/worker/cli/">Iron’s CLI tool</a><br />
 Setup your <a href="http://dev.iron.io/worker/reference/configuration/">Iron.io credentials</a><br />
 Install <a href="https://www.docker.com/get-docker">Docker</a><br />
@@ -44,7 +45,18 @@ You will need to create a Docker repository here:
 https://cloud.docker.com/
 
 <h4>***Note: you can also create a repo through the terminal***</h4>
+<h3>Create directory to host your code and credentials</h3>
+<h3>Getting your credentials added</h3>
 
+    <UL>
+        <li>Create a file called `config.js`</li>
+        <li>Copy your Twitter credentials in as show below:
+                `module.exports = {`<br>
+                    `consumer_key: '',`<br>  
+                    `consumer_secret: '',`<br>
+                    `access_token: '',` <br> 
+                    `access_token_secret: ''`<br>
+                    `}`</li>
 <h3>1. Package your Worker</h3><br>
 
 Let’s package it up inside a Docker image and upload it to a Docker Registry. Copy the Dockerfile from appropriate directory (depending on used programming language) of this <a href="https://github.com/iron-io/dockerworker">repository</a> and modify the ENTRYPOINT line to run your script. Build your docker image:<br><br>
