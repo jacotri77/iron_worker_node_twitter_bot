@@ -15,10 +15,8 @@
   "author": "Erik Jacobsen",
   "license": "ISC",
   "dependencies": {
-
     "iron_mq": "^0.9.2",
     "iron_worker": "^0.1.6",
     "twit": "^2.2.9"
-   
   }
 }

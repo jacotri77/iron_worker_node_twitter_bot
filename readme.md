@@ -2,7 +2,14 @@ This is a basic Twitter bot, incorporating <a href="https://docs.docker.com">Doc
 
 Credit to @amanhimself or  https://github.com/amandeepmittal for a lot of the base bot code.
 
-Before starting make sure <a href="https://nodejs.org/en/download/package-manager/">node</a> is installed.  For this bot I used node 8.3. You can check if it is installed with either of these commands:
+<h3>Before you begin</h3>
+
+Before starting, you will need to setup a couple of things. You only need to do this once.
+
+Install <a href="http://dev.iron.io/worker/cli/">Iron’s CLI tool</a>
+Setup your <a href="http://dev.iron.io/worker/reference/configuration/">Iron.io credentials</a>
+Install <a href="https://www.docker.com/get-docker">Docker</a>
+Install <a href="https://nodejs.org/en/download/package-manager/">node</a>.  For this bot I used node 8.3. You can check if it is installed with either of these commands:
 
 `node -v or
 node --version`
@@ -24,6 +31,9 @@ Make sure you have the following dependencies installed:
 These can be installed using the following:<br />
 `npm install iron_mq iron_worker twit`
 
+Make sure you have your Iron.io credentials either referenced in your project or in a separate `iron.json` file (best practice).  You can set your credentials up and download the Iron CLI here:
+
+
 
 This github assumes you have some familiarity with Docker and have a Docker Hub account.  If not, plese create one here:
 
@@ -33,11 +43,11 @@ You will need to create a Docker repository here:
 
 https://cloud.docker.com/
 
-<h2>***Note: you can also create a repo through the terminal***</h2>
+<h4>***Note: you can also create a repo through the terminal***</h4>
 
 <h3>1. Package your Worker</h3><br>
 
-Let’s package it up inside a Docker image and upload it to a Docker Registry. Copy the Dockerfile from appropriate directory (depending on used programming language) of this repository and modify the ENTRYPOINT line to run your script. Build your docker image:
+Let’s package it up inside a Docker image and upload it to a Docker Registry. Copy the Dockerfile from appropriate directory (depending on used programming language) of this <a href="https://github.com/iron-io/dockerworker">repository</a> and modify the ENTRYPOINT line to run your script. Build your docker image:
 `docker build -t USERNAME/IMAGENAME:TAG .`
 
 You should see the following output in your terminal
