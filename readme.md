@@ -49,12 +49,12 @@ https://cloud.docker.com/
 <h3>Getting your credentials added</h3><ul>
         <li>Create a file called `config.js`</li>
         <li>Copy your Twitter credentials in as show below:
-                `module.exports = {`<br>
-                    `consumer_key: '',`<br>  
-                    `consumer_secret: '',`<br>
-                    `access_token: '',` <br> 
-                    `access_token_secret: ''`<br>
-                    `}`</li></ul>
+                module.exports = {<br>
+                    consumer_key: '',<br>  
+                    consumer_secret: '',<br>
+                    access_token: '', <br> 
+                    access_token_secret: ''<br>
+                    }</li></ul>
 <h3>1. Package your Worker</h3><br>
 
 Let’s package it up inside a Docker image and upload it to a Docker Registry. Copy the Dockerfile from appropriate directory (depending on used programming language) of this <a href="https://github.com/iron-io/dockerworker">repository</a> and modify the ENTRYPOINT line to run your script. Build your docker image:<br><br>
