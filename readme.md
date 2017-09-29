@@ -10,10 +10,12 @@ Get your app keys through <a href="https://apps.twitter.com/">Twitter</a><br>
 Install <a href="http://dev.iron.io/worker/cli/">Iron’s CLI tool</a><br />
 Setup your <a href="http://dev.iron.io/worker/reference/configuration/">Iron.io credentials</a><br />
 Install <a href="https://www.docker.com/get-docker">Docker</a><br />
-Install <a href="https://nodejs.org/en/download/package-manager/">node</a>.  For this bot I used node 8.3. You can check if it is installed with either of these commands:
+Install <a href="https://nodejs.org/en/download/package-manager/">node</a>.  For this bot I used ```node node 8.3 ```. You can check if it is installed with either of these commands:
 
-`node -v or
-node --version`
+``` node
+node -v or
+node --version
+```
 
 If it is not installed run the following command to install it locally:
 
@@ -55,14 +57,15 @@ https://cloud.docker.com/
         <li>Create a directory to add your code into</li>
         <li>Create(or modify if you cloned down my repo) a file called <b>config.js</b></li>
         <li>Copy your Twitter credentials in as show below:</li></ul>
+
                 ```
-                module.exports = {
-                    consumer_key: '',  
-                    consumer_secret: '',
-                    access_token: '',  
-                    access_token_secret: ''
-                    }
-                    ```
+                        module.exports = {
+                        consumer_key: '',  
+                        consumer_secret: '',
+                        access_token: '',  
+                        access_token_secret: ''
+                        }
+                ```
                   
 
 <h3>Let's get the code uploaded and running in IronWorker!</h3>
