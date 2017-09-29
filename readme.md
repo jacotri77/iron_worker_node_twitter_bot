@@ -52,12 +52,12 @@ https://cloud.docker.com/
         <li>Create a directory to add your code into</li>
         <li>Create(or modify if you cloned down my repo) a file called <b>config.js</b></li>
         <li>Copy your Twitter credentials in as show below:<br><br>
-                `module.exports = {<br>
+                ```module.exports = {<br>
                     consumer_key: '',<br>  
                     consumer_secret: '',<br>
                     access_token: '', <br> 
                     access_token_secret: ''<br>
-                    }`</li></ul><br>
+                    }```</li></ul><br>
 
 <h3>Let's get the code uploaded and running in IronWorker!</h3><b2>
 <h4>1. Package your Worker</h4><br>
@@ -68,21 +68,23 @@ Replace USERNAME/IMAGENAME with your own Docker info or you can also build off o
 
 You should see the following output(with a few semantic differences based on your naming scheme and image size) in your terminal
 
-`Sending build context to Docker daemon  9.867MB `<br />
-`Step 1/4 : FROM iron/node`<br />
- `---> 9ca501065d18`<br />
-`Step 2/4 : WORKDIR /app`<br />
- `---> Using cache`<br />
- `---> ad54579d14b1`<br />
-`Step 3/4 : ADD . /app`<br />
- `---> 23ca3c7f7d4e`<br />
-`Removing intermediate container 88bd966abbb8`<br />
-`Step 4/4 : ENTRYPOINT node bot.js`<br />
- `---> Running in cfce360ecfdd`<br />
- `---> de954b4b140b`<br />
-`Removing intermediate container cfce360ecfdd`<br />
-`Successfully built de954b4b140b`<br />
-`Successfully tagged USERNAME/IMAGENAME:TAG`<br />
+```
+Sending build context to Docker daemon  9.867MB 
+Step 1/4 : FROM iron/node
+ ---> 9ca501065d18
+Step 2/4 : WORKDIR /app
+ ---> Using cache
+ ---> ad54579d14b1
+Step 3/4 : ADD . /app
+ ---> 23ca3c7f7d4e
+Removing intermediate container 88bd966abbb8
+Step 4/4 : ENTRYPOINT node bot.js
+ ---> Running in cfce360ecfdd
+ ---> de954b4b140b
+`Removing intermediate container cfce360ecfdd
+Successfully built de954b4b140b
+Successfully tagged USERNAME/IMAGENAME:TAG
+```
 
 <h4>2. Push it to Docker Hub</h4>
 
@@ -103,15 +105,17 @@ d532ebb4a10d: Layer already exists
 
 <h4>3. Register your image with Iron</h4>
 
-Ok, we’re ready to run this on Iron now, but first we have to let Iron know about the image you just pushed to Docker Hub.<br><br>
-`iron register USERNAME/IMAGENAME:TAG`
+Ok, we’re ready to run this on Iron now, but first we have to let Iron know about the image you just pushed to Docker Hub.
 
-`Configuring client`<br />
-        `Project 'Twitter bot' with id='59b8769be92bfa000c182d8d'`<br />
-`----->  Registering worker 'USERNAME/IMAGENAME'`<br />
-        `Registered code package with id='59baf777a74b24000a7240fa'`<br />
-        `Check `<br />`https://hud-e.iron.io/worker/projects/59b8769be92bfa000c182d8d/code/59baf77a74b24000a7240fa for more info`<br />
+```iron register USERNAME/IMAGENAME:TAG```
 
+```
+Configuring client
+        Project 'Twitter bot' with id='59b8769be92bfa000c182d8d'
+----->  Registering worker 'USERNAME/IMAGENAME'
+        Registered code package with id='59baf777a74b24000a7240fa'
+        Check https://hud-e.iron.io/worker/projects/59b8769be92bfa000c182d8d/code/59baf77a74b24000a7240fa for more info
+```
 <h4>3. Upload the worker code package to IronWorker</h4>
 
 This uplaods the code package you are going to use in your worker to IronWorker.<br><br>
