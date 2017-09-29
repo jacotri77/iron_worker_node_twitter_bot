@@ -46,12 +46,12 @@ You will need to create a Docker repository here:
 
 https://cloud.docker.com/
 
-<h4>***Note: you can also create a repo through the <a href="https://docs.docker.com/engine/reference/commandline/create/">terminal</a>***</h4><br>
-`docker create [OPTIONS] IMAGE [COMMAND] [ARG...]`
+<h4>***Note: you can also create a repo through the <a href="https://docs.docker.com/engine/reference/commandline/create/">terminal</a>***</h4>
+<p>`docker create [OPTIONS] IMAGE [COMMAND] [ARG...]`</p>
 
 <h3>Getting your Twitter credentials added</h3><ul>
         <li>Create a directory to add your code into</li>
-        <li>Create(or modify if you cloned down my repo) a file called `config.js`</li>
+        <li>Create(or modify if you cloned down my repo) a file called <b>config.js</b</li>
         <li>Copy your Twitter credentials in as show below:<br><br>
                 module.exports = {<br>
                     consumer_key: '',<br>  
