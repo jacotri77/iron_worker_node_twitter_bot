@@ -46,7 +46,7 @@ You will need to create a Docker repository here:
 
 https://cloud.docker.com/
 
-<h4>***Note: you can also create a repo through the <a href="https://docs.docker.com/engine/reference/commandline/create/">terminal</a>***</h4><br><br>
+<h4>***Note: you can also create a repo through the <a href="https://docs.docker.com/engine/reference/commandline/create/">terminal</a>***</h4><br>
 `docker create [OPTIONS] IMAGE [COMMAND] [ARG...]`
 
 <h3>Getting your Twitter credentials added</h3><ul>
