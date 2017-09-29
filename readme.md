@@ -19,7 +19,9 @@ If it is not installed run the following command to install it locally:
 
 `brew install node`
 
-This will also install `npm` which will enable you to add your other dependent packages.
+This will also install `npm` which will enable you to add `yarn`, which I prefer for installing dependendcies as it is deterministic so this project isn't broken a year from now :).
+
+`npm install -g yarn`
 
 Make sure you have the following dependencies installed:
 
@@ -30,7 +32,7 @@ Make sure you have the following dependencies installed:
   }`
 
 These can be installed using the following:<br />
-`npm install iron_mq iron_worker twit`
+`yarn add iron_mq iron_worker twit`
 
 Make sure you have your Iron.io credentials either referenced in your project or in a separate `iron.json` file (best practice).  You can set your credentials up and download the Iron CLI here:
 
@@ -44,11 +46,12 @@ You will need to create a Docker repository here:
 
 https://cloud.docker.com/
 
-<h4>***Note: you can also create a repo through the terminal***</h4>
+<h4>***Note: you can also create a repo through the <a href="https://docs.docker.com/engine/reference/commandline/create/">terminal</a>***</h4><br><br>
+`docker create [OPTIONS] IMAGE [COMMAND] [ARG...]`
 
 <h3>Getting your Twitter credentials added</h3><ul>
         <li>Create a directory to add your code into</li>
-        <li>Create a file called config.js</li>
+        <li>Create(or modify if you cloned down my repo) a file called `config.js`</li>
         <li>Copy your Twitter credentials in as show below:<br><br>
                 module.exports = {<br>
                     consumer_key: '',<br>  
