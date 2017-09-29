@@ -47,18 +47,17 @@ You will need to create a Docker repository here:
 https://cloud.docker.com/
 
 <h4>***Note: you can also create a repo through the <a href="https://docs.docker.com/engine/reference/commandline/create/">terminal</a>***</h4>
-<p>`docker create [OPTIONS] IMAGE [COMMAND] [ARG...]`</p>
 
 <h3>Getting your Twitter credentials added</h3><ul>
         <li>Create a directory to add your code into</li>
-        <li>Create(or modify if you cloned down my repo) a file called <b>config.js</b</li>
+        <li>Create(or modify if you cloned down my repo) a file called <b>config.js</b></li>
         <li>Copy your Twitter credentials in as show below:<br><br>
-                module.exports = {<br>
+                `module.exports = {<br>
                     consumer_key: '',<br>  
                     consumer_secret: '',<br>
                     access_token: '', <br> 
                     access_token_secret: ''<br>
-                    }</li></ul><br>
+                    }`</li></ul><br>
 
 <h3>Let's get the code uploaded and running in IronWorker!</h3><b2>
 <h4>1. Package your Worker</h4><br>
