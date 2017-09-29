@@ -25,11 +25,13 @@ This will also install `npm` which will enable you to add `yarn`, which I prefer
 
 Make sure you have the following dependencies installed:
 
-`"dependencies": {
+```
+"dependencies": {
     "iron_mq": "^0.9.2",
     "iron_worker": "^0.1.6",
     "twit": "^2.2.9"
-  }`
+  }
+  ```
 
 These can be installed using the following:<br />
 `yarn add iron_mq iron_worker twit`
@@ -52,12 +54,14 @@ https://cloud.docker.com/
         <li>Create a directory to add your code into</li>
         <li>Create(or modify if you cloned down my repo) a file called <b>config.js</b></li>
         <li>Copy your Twitter credentials in as show below:<br><br>
-                ```module.exports = {<br>
+                ```
+                module.exports = {<br>
                     consumer_key: '',<br>  
                     consumer_secret: '',<br>
                     access_token: '', <br> 
                     access_token_secret: ''<br>
-                    }```</li></ul><br>
+                    }```
+                    </li></ul><br>
 
 <h3>Let's get the code uploaded and running in IronWorker!</h3><b2>
 <h4>1. Package your Worker</h4><br>
