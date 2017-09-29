@@ -10,7 +10,7 @@ Get your app keys through <a href="https://apps.twitter.com/">Twitter</a><br>
 Install <a href="http://dev.iron.io/worker/cli/">Iron’s CLI tool</a><br />
 Setup your <a href="http://dev.iron.io/worker/reference/configuration/">Iron.io credentials</a><br />
 Install <a href="https://www.docker.com/get-docker">Docker</a><br />
-Install <a href="https://nodejs.org/en/download/package-manager/">node</a>.  For this bot I used ```node node 8.3 ```. You can check if it is installed with either of these commands:
+Install <a href="https://nodejs.org/en/download/package-manager/">node</a>.  For this bot I used ```node 8.3 ```. You can check if it is installed with either of these commands:
 
 ``` node
 node -v or
@@ -23,7 +23,9 @@ If it is not installed run the following command to install it locally:
 
 This will also install `npm` which will enable you to add `yarn`, which I prefer for installing dependendcies as it is deterministic so this project isn't broken a year from now :).
 
-`npm install -g yarn`
+```node
+npm install -g yarn
+```
 
 Make sure you have the following dependencies installed:
 
@@ -58,14 +60,14 @@ https://cloud.docker.com/
         <li>Create(or modify if you cloned down my repo) a file called <b>config.js</b></li>
         <li>Copy your Twitter credentials in as show below:</li></ul>
 
-                ```
-                        module.exports = {
-                        consumer_key: '',  
-                        consumer_secret: '',
-                        access_token: '',  
-                        access_token_secret: ''
-                        }
-                ```
+        ```
+        module.exports = {
+        consumer_key: '',  
+        consumer_secret: '',
+        access_token: '',  
+        access_token_secret: ''
+        }
+        ```
                   
 
 <h3>Let's get the code uploaded and running in IronWorker!</h3>
@@ -128,24 +130,27 @@ Configuring client
 <h4>3. Upload the worker code package to IronWorker</h4>
 
 This uplaods the code package you are going to use in your worker to IronWorker.<br><br>
-`iron worker upload -name bot USERNAME/IMAGENAME:TAG`
+```iron worker upload -name bot USERNAME/IMAGENAME:TAG```
 
-`Configuring client`<br />
-        `Project 'Twitter bot' with id='59b8769be92bfa000c182d8d'`<br />
-`----->  Uploading worker 'bot'`<br />
-        `Uploaded code package with id='59bafb21c5abcd000bafcd21'`<br />
-        `Check `<br />`https://hud-e.iron.io/worker/projects/59b8769be92bfa000c182d8d/code/59bafb21c5abcd000bafcd21 for more info`
+```Configuring client
+        Project 'Twitter bot' with id='59b8769be92bfa000c182d8d'
+----->  Uploading worker 'bot'
+        Uploaded code package with id='59bafb21c5abcd000bafcd21'
+        Check https://hud-e.iron.io/worker/projects/59b8769be92bfa000c182d8d/code/59bafb21c5abcd000bafcd21 for more info
+```
 
 <h4>5. Queue / Schedule jobs for your image</h4>
 
 Now you can start queuing jobs or schedule recurring jobs for your image.<br><br>
 `iron worker queue bot` for a direct queue<br> You can schedule your task `iron worker queue bot --start-at "12:30" --run-times 5 --run-every 70`
 
-`Configuring client`<br />
-        `Project 'Twitter bot' with id='59b8769be92bfa000c182d8d'`<br />
-`----->  Uploading worker 'bot'`<br />
-        `Uploaded code package with id='59bafb21c5abcd000bafcd21'`<br />
-        `Check` <br />`https://hud-e.iron.io/worker/projects/59b8769be92bfa000c182d8d/code/59bafb21c5abcd000bafcd21 for more info`
+```Configuring client
+        Project 'Twitter bot' with id='59b8769be92bfa000c182d8d'
+----->  Uploading worker 'bot'
+        Uploaded code package with id='59bafb21c5abcd000bafcd21'
+        Check
+        https://hud-e.iron.io/worker/projects/59b8769be92bfa000c182d8d/code/59bafb21c5abcd000bafcd21 for more info
+```
 
 <h4>6. Check on your running or finished tasks</h4>
 
