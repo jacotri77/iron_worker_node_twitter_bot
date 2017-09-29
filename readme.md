@@ -53,7 +53,7 @@ https://cloud.docker.com/
 <h3>Getting your Twitter credentials added</h3><ul>
         <li>Create a directory to add your code into</li>
         <li>Create(or modify if you cloned down my repo) a file called <b>config.js</b></li>
-        <li>Copy your Twitter credentials in as show below:<br><br>
+        <li>Copy your Twitter credentials in as show below:</li>
                 ```
                 module.exports = {
                     consumer_key: '',  
@@ -62,9 +62,9 @@ https://cloud.docker.com/
                     access_token_secret: ''
                     }
                     ```
-                    </li></ul><br>
+                  
 
-<h3>Let's get the code uploaded and running in IronWorker!</h3><b2>
+<h3>Let's get the code uploaded and running in IronWorker!</h3>
 <h4>1. Package your Worker</h4><br>
 
 Let’s package it up inside a Docker image and upload it to a Docker Registry. Copy the Dockerfile from appropriate directory (depending on used programming language) of this <a href="https://github.com/iron-io/dockerworker">repository</a> and modify the ENTRYPOINT (in this case we are using bot.js) line to run your script. Build your docker image:<br><br>
