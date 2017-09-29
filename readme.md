@@ -88,16 +88,16 @@ You should see the following output(with a few semantic differences based on you
 
 Push it to Docker Hub:
 
-```docker push USERNAME/IMAGENAME:TAG
+```docker push USERNAME/IMAGENAME:TAG```
 
-The push refers to a repository [docker.io/USERNAME/IMAGENAME]
+```The push refers to a repository [docker.io/USERNAME/IMAGENAME]
 a13329eaedc1: Layer already exists
 2f159679b3bf: Layer already exists
 0c9a3c45e098: Layer already exists
 d578f3150db2: Layer already exists
 d532ebb4a10d: Layer already exists
 5b5d58ee6404: Layer already exists
-0.0.3: digest: sha256:df41d5c718823eea7e06c2a49c676e5c6ef01cfadcc9e3f6cb2f17bf1`
+0.0.3: digest: sha256:df41d5c718823eea7e06c2a49c676e5c6ef01cfadcc9e3f6cb2f17bf1```
 
 <h4>3. Register your image with Iron</h4>
 
