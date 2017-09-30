@@ -11,9 +11,9 @@ Before starting, you will need to setup a couple of things. You only need to do 
 <li>Install <a href="http://dev.iron.io/worker/cli/">Iron’s CLI tool</a></li>
 <li>Setup your <a href="http://dev.iron.io/worker/reference/configuration/">Iron.io credentials</a></li>
 <li>Clone the repo or create your own files with the same structure.</li>
-```
+
 git clone https://github.com/jacotri77/iron_worker_node_twitter_bot
-```
+
 <li>Install <a href="https://www.docker.com/get-docker">Docker</a></li>
 <li>Install <a href="https://nodejs.org/en/download/package-manager/">node</a>.  For this bot I used ```node 8.3 ```. You can check if it is installed with either of these commands:</li></ol>
 
@@ -58,9 +58,9 @@ You will need to create a Docker repository here:
 https://cloud.docker.com/
 
 <h4>***Note: you can also create a repo through the <a href="https://docs.docker.com/engine/reference/commandline/create/">terminal</a>***</h4>
-```
+
 docker create [OPTIONS] IMAGE [COMMAND] [ARG...]
-```
+
 <h3>Getting your Twitter credentials added</h3>
         <ul>
         <li>Create a directory to add your code into</li>
