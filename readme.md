@@ -61,12 +61,12 @@ https://cloud.docker.com/
         <li>Copy your Twitter credentials in as show below:</li></ul>
 
 
-        ```module.exports = {
+        module.exports = {
         consumer_key: '',  
         consumer_secret: '',
         access_token: '',  
         access_token_secret: ''
-        }```
+        }
         
                   
 
