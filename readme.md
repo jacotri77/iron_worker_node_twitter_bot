@@ -149,7 +149,8 @@ This uplaods the code package you are going to use in your worker to IronWorker.
 <h4>5. Queue / Schedule jobs for your image</h4>
 
 Now you can start queuing jobs or schedule recurring jobs for your image.<br><br>
-`iron worker queue bot` for a direct queue<br> You can schedule your task `iron worker queue bot --start-at "12:30" --run-times 5 --run-every 70`
+`iron worker queue bot` for an instant queue<br> 
+You can schedule your task `iron worker queue bot --start-at "12:30" --run-times 5 --run-every 70`
 
 ```Configuring client
         Project 'Twitter bot' with id='59b8769be92bfa000c182d8d'
