@@ -6,11 +6,16 @@ Credit to @amanhimself or  https://github.com/amandeepmittal for a lot of the ba
 
 Before starting, you will need to setup a couple of things. You only need to do this once.
 
-Get your app keys through <a href="https://apps.twitter.com/">Twitter</a><br> 
-Install <a href="http://dev.iron.io/worker/cli/">Iron’s CLI tool</a><br />
-Setup your <a href="http://dev.iron.io/worker/reference/configuration/">Iron.io credentials</a><br />
-Install <a href="https://www.docker.com/get-docker">Docker</a><br />
-Install <a href="https://nodejs.org/en/download/package-manager/">node</a>.  For this bot I used ```node 8.3 ```. You can check if it is installed with either of these commands:
+<ol>
+<li>Get your app keys through <a href="https://apps.twitter.com/">Twitter</a></li>
+<li>Install <a href="http://dev.iron.io/worker/cli/">Iron’s CLI tool</a></li>
+<li>Setup your <a href="http://dev.iron.io/worker/reference/configuration/">Iron.io credentials</a></li>
+<li>Clone the repo or create your own files with the same structure.</li>
+```
+git clone https://github.com/jacotri77/iron_worker_node_twitter_bot
+```
+<li>Install <a href="https://www.docker.com/get-docker">Docker</a></li>
+<li>Install <a href="https://nodejs.org/en/download/package-manager/">node</a>.  For this bot I used ```node 8.3 ```. You can check if it is installed with either of these commands:</li></ol>
 
 ``` node
 node -v or
@@ -38,11 +43,11 @@ Make sure you have the following dependencies installed:
   ```
 
 These can be installed using the following:<br />
-`yarn add iron_mq iron_worker twit`
+```node
+yarn add iron_mq iron_worker twit
+```
 
-Make sure you have your Iron.io credentials either referenced in your project or in a separate `iron.json` file (best practice).  You can set your credentials up and download the Iron CLI here:
-
-
+Make sure you have your Iron.io credentials either referenced in your project or in a separate `iron.json` file (best practice).  You can set your credentials up and download the Iron CLI <a href="http://dev.iron.io/worker/cli/">here</a>:
 
 This github assumes you have some familiarity with Docker and have a Docker Hub account.  If not, plese create one here:
 
@@ -53,7 +58,9 @@ You will need to create a Docker repository here:
 https://cloud.docker.com/
 
 <h4>***Note: you can also create a repo through the <a href="https://docs.docker.com/engine/reference/commandline/create/">terminal</a>***</h4>
-```docker create [OPTIONS] IMAGE [COMMAND] [ARG...]```
+```
+docker create [OPTIONS] IMAGE [COMMAND] [ARG...]
+```
 <h3>Getting your Twitter credentials added</h3>
         <ul>
         <li>Create a directory to add your code into</li>
@@ -69,12 +76,12 @@ https://cloud.docker.com/
         }
         
                   
-
+<h3>*** Don't forget to setup your <a href="http://dev.iron.io/worker/reference/configuration/">Iron.io credentials</a>!! ***</h3>
 <h3>Let's get the code uploaded and running in IronWorker!</h3>
-<h4>1. Package your Worker</h4><br>
+<h4>1. Package your Worker</h4>
 
 Let’s package it up inside a Docker image and upload it to a Docker Registry. Copy the Dockerfile from appropriate directory (depending on used programming language) of this <a href="https://github.com/iron-io/dockerworker">repository</a> and modify the ENTRYPOINT (in this case we are using bot.js) line to run your script. Build your docker image:<br><br>
-`docker build -t USERNAME/IMAGENAME:TAG .` <br><br>
+`docker build -t USERNAME/IMAGENAME:TAG .` <br>
 Replace USERNAME/IMAGENAME with your own Docker info or you can also build off of the lightwieght images iron has for each language (iron/node, iron/go, etc.).  Those can be accessed <a href="https://github.com/iron-io/dockerworker">here</a>
 
 You should see the following output(with a few semantic differences based on your naming scheme and image size) in your terminal
