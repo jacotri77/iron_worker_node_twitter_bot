@@ -49,6 +49,7 @@ var retweet = function() {
           console.log('Something went wrong while SEARCHING...');
         }
     });
+  }
     var retweet2 = function() {
       var params = {
           q: '@getiron',  // REQUIRED
