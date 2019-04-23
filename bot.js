@@ -9,8 +9,6 @@ var Twitter2 = new twit(config);
 var iron_worker = require('iron_worker');
 
 console.log("task_id:", iron_worker.taskId());
-// console.log("params:", iron_worker.params());
-// console.log("config:", iron_worker.config());
 
 var iron_mq = require('iron_mq');
 
@@ -88,7 +86,7 @@ retweet();
  setInterval(retweet, 3000000);
 
  retweet2();
-// retweet in every 50 minutes
+// retweet in every 60 minutes
  setInterval(retweet, 3600000);
 
 // FAVORITE BOT====================
