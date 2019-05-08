@@ -18,7 +18,7 @@ var iron_mq = require('iron_mq');
 // find latest tweet according the query 'q' in params
 var retweet = function() {
     var params = {
-        q: '#serverless',  // REQUIRED
+        q: '#APM',  // REQUIRED
         result_type: 'recent',
         lang: 'en'
     }
@@ -50,19 +50,19 @@ var retweet = function() {
   }
     var retweet2 = function() {
       var params = {
-          q: '@getiron',  // REQUIRED
+          q: '#serverless',  // REQUIRED
           result_type: 'recent',
           lang: 'en'
       }
       // for more parameters, see: https://dev.twitter.com/rest/reference/get/search/tweets
   
-      Twitter.get('search/tweets', params, function(err, data) {
+      Twitter2.get('search/tweets', params, function(err, data) {
         // if there no errors
           if (!err) {
             // grab ID of tweet to retweet
               var retweetId = data.statuses[0].id_str;
               // Tell TWITTER to retweet
-              Twitter.post('statuses/retweet/:id', {
+              Twitter2.post('statuses/retweet/:id', {
                   id: retweetId
               }, function(err, response) {
                   if (response) {
@@ -87,14 +87,14 @@ retweet();
 
  retweet2();
 // retweet in every 60 minutes
- setInterval(retweet, 3600000);
+ setInterval(retweet2, 3600000);
 
 // FAVORITE BOT====================
 
 // find a random tweet and 'favorite' it
 var favoriteTweet = function(){
   var params = {
-      q: '@getiron',  // REQUIRED
+      q: '@scoutapm',  // REQUIRED
       result_type: 'recent',
       lang: 'en'
   }
