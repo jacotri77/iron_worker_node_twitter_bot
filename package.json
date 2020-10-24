@@ -17,7 +17,7 @@
   "dependencies": {
     "adm-zip": "^0.4.13",
     "cryptiles": "^4.1.3",
-    "hawk": "^7.0.10",
+    "hawk": "^8.0.1",
     "hoek": "^6.1.3",
     "iron": "^5.0.6",
     "iron_mq": "^0.9.3",
